@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="-3510.144927536232" y="1080.8035714285713"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Blood_Donation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="signIn" customModule="Blood_Donation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,6 +79,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
+                                    <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="79T-5v-xrQ"/>
                                     <segue destination="2cE-hu-7ud" kind="push" id="Wts-8z-QzL"/>
                                 </connections>
                             </button>
@@ -88,8 +89,11 @@
                                 <state key="normal" title="Forgot My Password">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f4J-Jw-PEo"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doen't have an account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YI-h1-F6O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dont't have an account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YI-h1-F6O">
                                 <rect key="frame" x="90" y="578" width="234" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -101,6 +105,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
+                                    <action selector="registerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FdM-t1-1rh"/>
                                     <segue destination="RUp-Tr-Ymk" kind="push" id="s6G-02-H3A"/>
                                 </connections>
                             </button>
@@ -108,11 +113,17 @@
                                 <rect key="frame" x="79" y="712" width="257" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="SCJZO.png"/>
+                                <connections>
+                                    <action selector="facebookAuthButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b49-0Z-K7k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2y-q6-DgT">
                                 <rect key="frame" x="79" y="645" width="257" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="SCJZO (1).png"/>
+                                <connections>
+                                    <action selector="googleAuthButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAq-bP-jwl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -127,7 +138,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Sfd-Zc-n68">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hUK-Iz-w0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="gPE-Gx-CgF" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4uO-ak-13i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -141,6 +151,7 @@
                         <segue destination="wwX-nj-vcA" kind="relationship" relationship="viewControllers" id="5MF-yY-Nqf"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUK-Iz-w0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1990" y="-306"/>
         </scene>
@@ -198,7 +209,6 @@
         <!--Request-->
         <scene sceneID="5sL-O0-zEE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IPX-bH-YsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="wwX-nj-vcA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Request" image="plus" catalog="system" id="T5y-gd-6X6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="URc-Ws-Cm7">
@@ -209,16 +219,24 @@
                         <segue destination="X9G-tB-A95" kind="relationship" relationship="rootViewController" id="ia1-3R-CaX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPX-bH-YsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-558" y="421"/>
         </scene>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="HaE-QK-5fx">
             <objects>
-                <viewController id="HIZ-rS-Fjt" sceneMemberID="viewController">
+                <viewController id="HIZ-rS-Fjt" customClass="main" customModule="Blood_Donation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mSO-wk-97Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8e6-ga-t5M">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Qcc-gh-UVH"/>
                     </view>
@@ -226,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lna-SZ-pcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2010" y="1083"/>
+            <point key="canvasLocation" x="-1991" y="1083"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GdN-mL-9j1">
@@ -247,15 +265,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="icy-GZ-baJ" id="zJ8-s8-prc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyM-tp-Xbg">
-                                                    <rect key="frame" x="20" y="11" width="115" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -315,12 +324,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Je-gy-7Rl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-543.47826086956525" y="1081.4732142857142"/>
+            <point key="canvasLocation" x="-319" y="1120"/>
         </scene>
-        <!--View Controller-->
+        <!--Register-->
         <scene sceneID="Dq1-US-3qo">
             <objects>
-                <viewController id="RUp-Tr-Ymk" sceneMemberID="viewController">
+                <viewController id="RUp-Tr-Ymk" customClass="register" customModule="Blood_Donation" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I3R-l8-BXe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,19 +372,25 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j3L-T7-OtZ">
-                                <rect key="frame" x="20" y="525" width="374" height="34"/>
+                                <rect key="frame" x="20" y="571" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O2b-hz-CGE">
-                                <rect key="frame" x="20" y="579" width="374" height="34"/>
+                                <rect key="frame" x="20" y="623" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Blood Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ay2-bU-3ar">
+                                <rect key="frame" x="20" y="520" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZv-fe-RaK">
-                                <rect key="frame" x="179" y="648" width="57" height="30"/>
+                                <rect key="frame" x="179" y="674" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                             </button>
@@ -384,6 +399,9 @@
                         <viewLayoutGuide key="safeArea" id="CFY-8S-VRV"/>
                     </view>
                     <navigationItem key="navigationItem" id="mE8-rB-BW5"/>
+                    <connections>
+                        <outlet property="birthDate" destination="fgL-iS-nDu" id="bnn-nt-DtU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mb7-Mb-k0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,30 +14,51 @@ class requestDonation: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if(pickerView.tag == 0) {
+        if(hospital.tag == 1)
+        
+        {
+            print(hospital.isEditing)
+            return hospitals.count
             
-            return hospitals.count}
-        else{
+        }
+        else
+        {
             return bloodarray.count
         }
+      
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-           if(pickerView.tag == 0) {
+           if(hospital.tag == 1) {
                  
-                 return hospitals[row]}
-             else{
+                 return hospitals[row]
+            
+           }
+             else
+           {
                  return bloodarray[row]
              }
+          
+        
     }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        hospital.text = hospitals[row]
-           if(pickerView.tag == 0) {
-                 
-            hospital.text = hospitals[row]}
-             else {
+    
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+       
+           if(hospital.tag == 1)
+           {
+                
+            hospital.text = hospitals[row]
+            
+           }
+             else
+           {
             bloodTypeInput.text = bloodarray[row]
-             }    }
+            }
+         
+    
+}
     
     
     
