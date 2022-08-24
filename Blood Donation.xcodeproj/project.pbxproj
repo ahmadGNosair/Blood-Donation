@@ -19,9 +19,17 @@
 		35D8BCC1289A93A4006C1FC8 /* register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCC0289A93A4006C1FC8 /* register.swift */; };
 		35D8BCC3289A9497006C1FC8 /* signIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCC2289A9497006C1FC8 /* signIn.swift */; };
 		35D8BCC9289AB96D006C1FC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35D8BCC8289AB96D006C1FC8 /* GoogleService-Info.plist */; };
+		35D8BCCB289BEB87006C1FC8 /* logo.drawio.png in Resources */ = {isa = PBXBuildFile; fileRef = 35D8BCCA289BEB87006C1FC8 /* logo.drawio.png */; };
+		35D8BCCD28A3B758006C1FC8 /* firebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCCC28A3B758006C1FC8 /* firebaseAuth.swift */; };
+		35D8BCD228A3D6EA006C1FC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCD128A3D6EA006C1FC8 /* Constants.swift */; };
+		35D8BCD428A3D8B9006C1FC8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCD328A3D8B9006C1FC8 /* HomeViewController.swift */; };
+		35D8BCD628A3E66E006C1FC8 /* accountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCD528A3E66E006C1FC8 /* accountInfo.swift */; };
+		35D8BCD828B4EEFF006C1FC8 /* TabBarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCD728B4EEFF006C1FC8 /* TabBarControll.swift */; };
+		70DAF01EF09C1C1EE13B3A87 /* Pods_Blood_Donation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE68CFCD3D83B65582C0DBF /* Pods_Blood_Donation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EE68CFCD3D83B65582C0DBF /* Pods_Blood_Donation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blood_Donation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D8BC9C28929BFD006C1FC8 /* Blood Donation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood Donation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D8BC9F28929BFD006C1FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35D8BCA128929BFD006C1FC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +44,14 @@
 		35D8BCC0289A93A4006C1FC8 /* register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = register.swift; sourceTree = "<group>"; };
 		35D8BCC2289A9497006C1FC8 /* signIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signIn.swift; sourceTree = "<group>"; };
 		35D8BCC8289AB96D006C1FC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		35D8BCCA289BEB87006C1FC8 /* logo.drawio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.drawio.png; sourceTree = "<group>"; };
+		35D8BCCC28A3B758006C1FC8 /* firebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseAuth.swift; sourceTree = "<group>"; };
+		35D8BCD128A3D6EA006C1FC8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		35D8BCD328A3D8B9006C1FC8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		35D8BCD528A3E66E006C1FC8 /* accountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountInfo.swift; sourceTree = "<group>"; };
+		35D8BCD728B4EEFF006C1FC8 /* TabBarControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControll.swift; sourceTree = "<group>"; };
+		7060149359C7A5D6C57DA138 /* Pods-Blood Donation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blood Donation.release.xcconfig"; path = "Target Support Files/Pods-Blood Donation/Pods-Blood Donation.release.xcconfig"; sourceTree = "<group>"; };
+		A3D224FFAABBAF379B9FE190 /* Pods-Blood Donation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blood Donation.debug.xcconfig"; path = "Target Support Files/Pods-Blood Donation/Pods-Blood Donation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70DAF01EF09C1C1EE13B3A87 /* Pods_Blood_Donation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +72,7 @@
 				35D8BC9E28929BFD006C1FC8 /* Blood Donation */,
 				35D8BC9D28929BFD006C1FC8 /* Products */,
 				FEDD6E00B38A4CDDAD99A6AF /* Pods */,
+				C42F320660D4CF46518360C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,16 +87,22 @@
 		35D8BC9E28929BFD006C1FC8 /* Blood Donation */ = {
 			isa = PBXGroup;
 			children = (
+				35D8BCCE28A3D692006C1FC8 /* Helpers */,
 				35D8BC9F28929BFD006C1FC8 /* AppDelegate.swift */,
 				35D8BCC0289A93A4006C1FC8 /* register.swift */,
+				35D8BCD328A3D8B9006C1FC8 /* HomeViewController.swift */,
 				35D8BCC2289A9497006C1FC8 /* signIn.swift */,
+				35D8BCD528A3E66E006C1FC8 /* accountInfo.swift */,
 				35D8BCA128929BFD006C1FC8 /* SceneDelegate.swift */,
 				35D8BCA328929BFD006C1FC8 /* ViewController.swift */,
 				35D8BCA528929BFD006C1FC8 /* Main.storyboard */,
+				35D8BCD728B4EEFF006C1FC8 /* TabBarControll.swift */,
+				35D8BCCC28A3B758006C1FC8 /* firebaseAuth.swift */,
 				35D8BCBA2892BAE1006C1FC8 /* requestDonation.swift */,
 				35D8BCA828929BFF006C1FC8 /* Assets.xcassets */,
 				35D8BCB82892AF1D006C1FC8 /* SCJZO (1).png */,
 				35D8BCB62892AEE9006C1FC8 /* SCJZO.png */,
+				35D8BCCA289BEB87006C1FC8 /* logo.drawio.png */,
 				35D8BCAA28929BFF006C1FC8 /* LaunchScreen.storyboard */,
 				35D8BCAD28929BFF006C1FC8 /* Info.plist */,
 				35D8BCC8289AB96D006C1FC8 /* GoogleService-Info.plist */,
@@ -86,9 +110,27 @@
 			path = "Blood Donation";
 			sourceTree = "<group>";
 		};
+		35D8BCCE28A3D692006C1FC8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				35D8BCD128A3D6EA006C1FC8 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C42F320660D4CF46518360C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EE68CFCD3D83B65582C0DBF /* Pods_Blood_Donation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FEDD6E00B38A4CDDAD99A6AF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				A3D224FFAABBAF379B9FE190 /* Pods-Blood Donation.debug.xcconfig */,
+				7060149359C7A5D6C57DA138 /* Pods-Blood Donation.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -100,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35D8BCB028929BFF006C1FC8 /* Build configuration list for PBXNativeTarget "Blood Donation" */;
 			buildPhases = (
+				124E2088113FE359CF2896E7 /* [CP] Check Pods Manifest.lock */,
 				35D8BC9828929BFD006C1FC8 /* Sources */,
 				35D8BC9928929BFD006C1FC8 /* Frameworks */,
 				35D8BC9A28929BFD006C1FC8 /* Resources */,
+				C51D512629D762524B2472C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35D8BCB72892AEE9006C1FC8 /* SCJZO.png in Resources */,
+				35D8BCCB289BEB87006C1FC8 /* logo.drawio.png in Resources */,
 				35D8BCAC28929BFF006C1FC8 /* LaunchScreen.storyboard in Resources */,
 				35D8BCA928929BFF006C1FC8 /* Assets.xcassets in Resources */,
 				35D8BCB92892AF1D006C1FC8 /* SCJZO (1).png in Resources */,
@@ -162,17 +207,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		124E2088113FE359CF2896E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Blood Donation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C51D512629D762524B2472C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Blood Donation/Pods-Blood Donation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Blood Donation/Pods-Blood Donation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Blood Donation/Pods-Blood Donation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35D8BC9828929BFD006C1FC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D8BCCD28A3B758006C1FC8 /* firebaseAuth.swift in Sources */,
 				35D8BCA428929BFD006C1FC8 /* ViewController.swift in Sources */,
 				35D8BCBB2892BAE1006C1FC8 /* requestDonation.swift in Sources */,
 				35D8BCA028929BFD006C1FC8 /* AppDelegate.swift in Sources */,
 				35D8BCA228929BFD006C1FC8 /* SceneDelegate.swift in Sources */,
+				35D8BCD428A3D8B9006C1FC8 /* HomeViewController.swift in Sources */,
 				35D8BCC1289A93A4006C1FC8 /* register.swift in Sources */,
+				35D8BCD628A3E66E006C1FC8 /* accountInfo.swift in Sources */,
 				35D8BCC3289A9497006C1FC8 /* signIn.swift in Sources */,
+				35D8BCD828B4EEFF006C1FC8 /* TabBarControll.swift in Sources */,
+				35D8BCD228A3D6EA006C1FC8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +406,7 @@
 		};
 		35D8BCB128929BFF006C1FC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3D224FFAABBAF379B9FE190 /* Pods-Blood Donation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -331,6 +424,7 @@
 		};
 		35D8BCB228929BFF006C1FC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7060149359C7A5D6C57DA138 /* Pods-Blood Donation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
