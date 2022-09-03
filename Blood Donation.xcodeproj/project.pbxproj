@@ -24,7 +24,10 @@
 		35D8BCD228A3D6EA006C1FC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCD128A3D6EA006C1FC8 /* Constants.swift */; };
 		35D8BCD428A3D8B9006C1FC8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCD328A3D8B9006C1FC8 /* HomeViewController.swift */; };
 		35D8BCD628A3E66E006C1FC8 /* accountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCD528A3E66E006C1FC8 /* accountInfo.swift */; };
-		35D8BCD828B4EEFF006C1FC8 /* TabBarControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCD728B4EEFF006C1FC8 /* TabBarControll.swift */; };
+		35D8BCDE28B6C2A4006C1FC8 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCDD28B6C2A4006C1FC8 /* HomeCell.swift */; };
+		35D8BCE428C0F995006C1FC8 /* EditMyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCE328C0F995006C1FC8 /* EditMyInfo.swift */; };
+		35D8BCEC28C138D3006C1FC8 /* SetNewPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCEB28C138D3006C1FC8 /* SetNewPassword.swift */; };
+		35D8BCF028C29E3A006C1FC8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCEF28C29E3A006C1FC8 /* TabBarController.swift */; };
 		70DAF01EF09C1C1EE13B3A87 /* Pods_Blood_Donation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE68CFCD3D83B65582C0DBF /* Pods_Blood_Donation.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +52,10 @@
 		35D8BCD128A3D6EA006C1FC8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		35D8BCD328A3D8B9006C1FC8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		35D8BCD528A3E66E006C1FC8 /* accountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountInfo.swift; sourceTree = "<group>"; };
-		35D8BCD728B4EEFF006C1FC8 /* TabBarControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControll.swift; sourceTree = "<group>"; };
+		35D8BCDD28B6C2A4006C1FC8 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = ../HomeCell.swift; sourceTree = "<group>"; };
+		35D8BCE328C0F995006C1FC8 /* EditMyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyInfo.swift; sourceTree = "<group>"; };
+		35D8BCEB28C138D3006C1FC8 /* SetNewPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetNewPassword.swift; path = Helpers/SetNewPassword.swift; sourceTree = "<group>"; };
+		35D8BCEF28C29E3A006C1FC8 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7060149359C7A5D6C57DA138 /* Pods-Blood Donation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blood Donation.release.xcconfig"; path = "Target Support Files/Pods-Blood Donation/Pods-Blood Donation.release.xcconfig"; sourceTree = "<group>"; };
 		A3D224FFAABBAF379B9FE190 /* Pods-Blood Donation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blood Donation.debug.xcconfig"; path = "Target Support Files/Pods-Blood Donation/Pods-Blood Donation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +75,7 @@
 		35D8BC9328929BFD006C1FC8 = {
 			isa = PBXGroup;
 			children = (
+				35D8BCEF28C29E3A006C1FC8 /* TabBarController.swift */,
 				35D8BC9E28929BFD006C1FC8 /* Blood Donation */,
 				35D8BC9D28929BFD006C1FC8 /* Products */,
 				FEDD6E00B38A4CDDAD99A6AF /* Pods */,
@@ -88,6 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				35D8BCCE28A3D692006C1FC8 /* Helpers */,
+				35D8BCEB28C138D3006C1FC8 /* SetNewPassword.swift */,
+				35D8BCE328C0F995006C1FC8 /* EditMyInfo.swift */,
+				35D8BCDD28B6C2A4006C1FC8 /* HomeCell.swift */,
 				35D8BC9F28929BFD006C1FC8 /* AppDelegate.swift */,
 				35D8BCC0289A93A4006C1FC8 /* register.swift */,
 				35D8BCD328A3D8B9006C1FC8 /* HomeViewController.swift */,
@@ -96,7 +106,6 @@
 				35D8BCA128929BFD006C1FC8 /* SceneDelegate.swift */,
 				35D8BCA328929BFD006C1FC8 /* ViewController.swift */,
 				35D8BCA528929BFD006C1FC8 /* Main.storyboard */,
-				35D8BCD728B4EEFF006C1FC8 /* TabBarControll.swift */,
 				35D8BCCC28A3B758006C1FC8 /* firebaseAuth.swift */,
 				35D8BCBA2892BAE1006C1FC8 /* requestDonation.swift */,
 				35D8BCA828929BFF006C1FC8 /* Assets.xcassets */,
@@ -255,15 +264,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				35D8BCCD28A3B758006C1FC8 /* firebaseAuth.swift in Sources */,
+				35D8BCF028C29E3A006C1FC8 /* TabBarController.swift in Sources */,
 				35D8BCA428929BFD006C1FC8 /* ViewController.swift in Sources */,
 				35D8BCBB2892BAE1006C1FC8 /* requestDonation.swift in Sources */,
 				35D8BCA028929BFD006C1FC8 /* AppDelegate.swift in Sources */,
+				35D8BCE428C0F995006C1FC8 /* EditMyInfo.swift in Sources */,
 				35D8BCA228929BFD006C1FC8 /* SceneDelegate.swift in Sources */,
+				35D8BCEC28C138D3006C1FC8 /* SetNewPassword.swift in Sources */,
 				35D8BCD428A3D8B9006C1FC8 /* HomeViewController.swift in Sources */,
 				35D8BCC1289A93A4006C1FC8 /* register.swift in Sources */,
 				35D8BCD628A3E66E006C1FC8 /* accountInfo.swift in Sources */,
 				35D8BCC3289A9497006C1FC8 /* signIn.swift in Sources */,
-				35D8BCD828B4EEFF006C1FC8 /* TabBarControll.swift in Sources */,
+				35D8BCDE28B6C2A4006C1FC8 /* HomeCell.swift in Sources */,
 				35D8BCD228A3D6EA006C1FC8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
