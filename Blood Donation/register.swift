@@ -17,37 +17,30 @@ import FirebaseStorage
 class register: UIViewController,  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     private let storage = Storage.storage().reference()
-    
+    var image : UIImage?
+    var imageData : Data?
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        else {
             return
         }
-        guard let imageData = image.pngData() else{
+        self.image = image
+
+        guard let imageData = image.pngData()
+            else{
             return
         }
+        self.imageData = imageData
+
         picker.dismiss(animated: true, completion: nil)
+        self.profilepicture.image = image
         
         
         
         
-        storage.child("images/file.png").putData(imageData, metadata: nil, completion: {_, error in
-            guard error == nil else {
-                print ("failed to upload")
-                return
-            }
-            self.profilepicture.image = image
-            self.storage.child("images/file.png").downloadURL(completion: {url, error in
-                guard let url = url, error == nil else {
-                    return
-                }
-                let urlString = url.absoluteString
-                print("download url : \(urlString)")
-                UserDefaults.standard.set(urlString, forKey: "url")
-            })
-        })
     }
     
 
@@ -58,7 +51,6 @@ class register: UIViewController,  UIImagePickerControllerDelegate, UINavigation
     }
     
     
-    @IBOutlet weak var password: UITextField!
     
     @IBOutlet weak var emailAddress: UITextField!
     
@@ -67,6 +59,10 @@ class register: UIViewController,  UIImagePickerControllerDelegate, UINavigation
         
         profilepicture.clipsToBounds = true
         profilepicture.layer.cornerRadius = profilepicture.frame.size.height / 2
+        profilepicture.layer.borderWidth = 0.25
+        passwordTextField.isSecureTextEntry = true
+        confirmPass.isSecureTextEntry = true
+        
         
      //   birthDate.inputView = birth;
         
@@ -122,28 +118,49 @@ class register: UIViewController,  UIImagePickerControllerDelegate, UINavigation
         }
         
         //create user
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, err) in
-            if err != nil{
-            
-                print("error creating user")
-                print(err!)
-            }
-            else{
-                let db = Firestore.firestore()
+        if (self.passwordTextField.text == self.confirmPass.text) {
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, err) in
+                if err != nil{
                 
-                db.collection("users").addDocument(data: ["first_name" : self.fname.text!, "last_name":self.lname.text! , "uid" : result!.user.uid , "phone":self.phoneNo.text! , "city":self.city.text!, "blood_type": self.bloodType.text!, "email":self.emailAddress.text!,"password":self.password.text!, "profile_picture": UserDefaults.standard.string(forKey: "url")!]) { (error) in
-                    
-                    if error != nil {
-                        print(error!)
-                        print(self.fname.text!)
-                        print(self.phoneNo.text!)
-                        
-                    }
+                    print("error creating user")
+                    print(err!)
                 }
-                self.redirectToHome()
+                else{
+                    
+                    self.storage.child("images/file.png").putData(self.imageData!, metadata: nil, completion: {_, error in
+                        guard error == nil else {
+                            print ("failed to upload")
+                            return
+                        }
+                        self.profilepicture.image = self.image
+                        self.storage.child("images/file.png").downloadURL(completion: {url, error in
+                            guard let url = url, error == nil else {
+                                return
+                            }
+                            let urlString = url.absoluteString
+                            print("download url : \(urlString)")
+                            UserDefaults.standard.set(urlString, forKey: "url")
+                        })
+                    })
+                    
+                    let db = Firestore.firestore()
+                    
+                    db.collection("users").addDocument(data: ["first_name" : self.fname.text!, "last_name":self.lname.text! , "uid" : result!.user.uid , "phone":self.phoneNo.text! , "city":self.city.text!, "blood_type": self.bloodType.text!, "email":self.emailAddress.text!,"password":self.passwordTextField.text!, "profile_picture": UserDefaults.standard.string(forKey: "url")!]) { (error) in
+                        
+                        if error != nil {
+                            print(error!)
+                            print(self.fname.text!)
+                            print(self.phoneNo.text!)
+                            
+                        }
+                    }
+                    
+                    self.redirectToHome()
+                }
+                
             }
-            
         }
+        
          
         
        
@@ -159,6 +176,7 @@ class register: UIViewController,  UIImagePickerControllerDelegate, UINavigation
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var confirmPass: UITextField!
     
     @IBOutlet weak var city: UITextField!
     @IBOutlet weak var bloodType: UITextField!

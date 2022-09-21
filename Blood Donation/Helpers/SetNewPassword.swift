@@ -19,6 +19,8 @@ class SetNewPassword: UIViewController {
     @IBOutlet weak var newPassConfirm: UITextField!
     
     @IBAction func setPassButton(_ sender: Any) {
+        var docID : String!
+        
         let db = Firestore.firestore()
         let userId = Auth.auth().currentUser?.uid
         db.collection("users").whereField("email", isEqualTo: Auth.auth().currentUser?.email ?? "").getDocuments() { (querySnapshot, err) in
@@ -27,9 +29,10 @@ class SetNewPassword: UIViewController {
             }else {
                 for document in querySnapshot!.documents {
                     print(document.data())
+                    docID = document.documentID
                     if (self.currentPass.text == "\(document.get("password") ?? "")") {
                         if (self.newPass.text == self.newPassConfirm.text) {
-                            db.collection("users").document().updateData(["password":self.newPass.text!])
+                            db.collection("users").document(docID).updateData(["password":self.newPass.text!])
                             Auth.auth().currentUser?.updatePassword(to: self.newPass.text!){ error in
                                 if let error = error{
                                     print(error)
@@ -37,9 +40,18 @@ class SetNewPassword: UIViewController {
                             }
                         }else{
                             print("password doesn't match")
+                              self.newPassConfirm.layer.borderColor = UIColor.red.cgColor
+                                          self.newPassConfirm.layer.borderWidth = 1
+                                          self.newPassConfirm.text = ""
+                                          self.newPassConfirm.placeholder = "Password doesn't match"
                         }
                     }else{
                         print("incorrect password")
+                        self.currentPass.layer.borderColor = UIColor.red.cgColor
+                        self.currentPass.layer.borderWidth = 1
+                        self.currentPass.text = ""
+                        self.currentPass.placeholder = "Incorrect Password"
+
                     }
                 }
             }
@@ -47,8 +59,11 @@ class SetNewPassword: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        currentPass.isSecureTextEntry = true
+        newPassConfirm.isSecureTextEntry = true
+        newPass.isSecureTextEntry = true
 
-        // Do any additional setup after loading the view.
     }
     
 

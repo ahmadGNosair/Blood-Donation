@@ -12,7 +12,8 @@ import FirebaseCore
 
 
 class signIn: UIViewController {
-
+    @IBOutlet weak var signinError: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +35,14 @@ class signIn: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (result , error) in
             if error != nil {
                 print(error!)
-            }
+                print(error?.localizedDescription)
+             if (error!.localizedDescription.contains("The password is invalid or the user does not have a password")){
+                self.passwordTextField.layer.borderWidth = 1
+                self.passwordTextField.layer.borderColor = UIColor.red.cgColor
+                self.signinError.text = "Incorrect Password"
+                self.signinError.textColor = UIColor.red
+                
+                }}
             else{
                 print("signed in")
                 self.redirectUserPage()
@@ -42,8 +50,10 @@ class signIn: UIViewController {
         }
     }
     
+    
    
     @IBAction func forgotButton(_ sender: Any) {
+        
     }
     
     @IBAction func registerButton(_ sender: Any) {

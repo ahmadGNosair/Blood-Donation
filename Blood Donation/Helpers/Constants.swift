@@ -14,5 +14,7 @@ struct Constant {
         static let userPage = "myAccount"
         static let tabBar = "myTabBar"
         static let signInPage = "signIn"
+        static let editRequest = "editRequest"
+        static let myrequests = "myRequests"
     }
 }

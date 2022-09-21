@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35A6A18828CA32EC00D1C582 /* MyRequestsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A18728CA32EC00D1C582 /* MyRequestsCell.swift */; };
+		35A6A18C28CA357200D1C582 /* MyRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A18B28CA357200D1C582 /* MyRequests.swift */; };
+		35A6A18E28CB652C00D1C582 /* whatsapp__3_-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A6A18D28CB652C00D1C582 /* whatsapp__3_-removebg-preview.png */; };
+		35A6A19828CCEE1300D1C582 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A19728CCEE1300D1C582 /* ResetPassword.swift */; };
+		35A6A19A28DB27B400D1C582 /* EditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A6A19928DB27B400D1C582 /* EditRequest.swift */; };
 		35D8BCA028929BFD006C1FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BC9F28929BFD006C1FC8 /* AppDelegate.swift */; };
 		35D8BCA228929BFD006C1FC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCA128929BFD006C1FC8 /* SceneDelegate.swift */; };
 		35D8BCA428929BFD006C1FC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BCA328929BFD006C1FC8 /* ViewController.swift */; };
@@ -33,6 +38,11 @@
 
 /* Begin PBXFileReference section */
 		0EE68CFCD3D83B65582C0DBF /* Pods_Blood_Donation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blood_Donation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35A6A18728CA32EC00D1C582 /* MyRequestsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestsCell.swift; sourceTree = "<group>"; };
+		35A6A18B28CA357200D1C582 /* MyRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyRequests.swift; path = ../MyRequests.swift; sourceTree = "<group>"; };
+		35A6A18D28CB652C00D1C582 /* whatsapp__3_-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whatsapp__3_-removebg-preview.png"; sourceTree = "<group>"; };
+		35A6A19728CCEE1300D1C582 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
+		35A6A19928DB27B400D1C582 /* EditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRequest.swift; sourceTree = "<group>"; };
 		35D8BC9C28929BFD006C1FC8 /* Blood Donation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood Donation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D8BC9F28929BFD006C1FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35D8BCA128929BFD006C1FC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,13 +112,18 @@
 				35D8BCC0289A93A4006C1FC8 /* register.swift */,
 				35D8BCD328A3D8B9006C1FC8 /* HomeViewController.swift */,
 				35D8BCC2289A9497006C1FC8 /* signIn.swift */,
+				35A6A19728CCEE1300D1C582 /* ResetPassword.swift */,
 				35D8BCD528A3E66E006C1FC8 /* accountInfo.swift */,
 				35D8BCA128929BFD006C1FC8 /* SceneDelegate.swift */,
 				35D8BCA328929BFD006C1FC8 /* ViewController.swift */,
 				35D8BCA528929BFD006C1FC8 /* Main.storyboard */,
+				35A6A19928DB27B400D1C582 /* EditRequest.swift */,
+				35A6A18B28CA357200D1C582 /* MyRequests.swift */,
+				35A6A18728CA32EC00D1C582 /* MyRequestsCell.swift */,
 				35D8BCCC28A3B758006C1FC8 /* firebaseAuth.swift */,
 				35D8BCBA2892BAE1006C1FC8 /* requestDonation.swift */,
 				35D8BCA828929BFF006C1FC8 /* Assets.xcassets */,
+				35A6A18D28CB652C00D1C582 /* whatsapp__3_-removebg-preview.png */,
 				35D8BCB82892AF1D006C1FC8 /* SCJZO (1).png */,
 				35D8BCB62892AEE9006C1FC8 /* SCJZO.png */,
 				35D8BCCA289BEB87006C1FC8 /* logo.drawio.png */,
@@ -209,6 +224,7 @@
 				35D8BCAC28929BFF006C1FC8 /* LaunchScreen.storyboard in Resources */,
 				35D8BCA928929BFF006C1FC8 /* Assets.xcassets in Resources */,
 				35D8BCB92892AF1D006C1FC8 /* SCJZO (1).png in Resources */,
+				35A6A18E28CB652C00D1C582 /* whatsapp__3_-removebg-preview.png in Resources */,
 				35D8BCA728929BFD006C1FC8 /* Main.storyboard in Resources */,
 				35D8BCC9289AB96D006C1FC8 /* GoogleService-Info.plist in Resources */,
 			);
@@ -265,6 +281,7 @@
 			files = (
 				35D8BCCD28A3B758006C1FC8 /* firebaseAuth.swift in Sources */,
 				35D8BCF028C29E3A006C1FC8 /* TabBarController.swift in Sources */,
+				35A6A19828CCEE1300D1C582 /* ResetPassword.swift in Sources */,
 				35D8BCA428929BFD006C1FC8 /* ViewController.swift in Sources */,
 				35D8BCBB2892BAE1006C1FC8 /* requestDonation.swift in Sources */,
 				35D8BCA028929BFD006C1FC8 /* AppDelegate.swift in Sources */,
@@ -273,9 +290,12 @@
 				35D8BCEC28C138D3006C1FC8 /* SetNewPassword.swift in Sources */,
 				35D8BCD428A3D8B9006C1FC8 /* HomeViewController.swift in Sources */,
 				35D8BCC1289A93A4006C1FC8 /* register.swift in Sources */,
+				35A6A19A28DB27B400D1C582 /* EditRequest.swift in Sources */,
 				35D8BCD628A3E66E006C1FC8 /* accountInfo.swift in Sources */,
 				35D8BCC3289A9497006C1FC8 /* signIn.swift in Sources */,
 				35D8BCDE28B6C2A4006C1FC8 /* HomeCell.swift in Sources */,
+				35A6A18C28CA357200D1C582 /* MyRequests.swift in Sources */,
+				35A6A18828CA32EC00D1C582 /* MyRequestsCell.swift in Sources */,
 				35D8BCD228A3D6EA006C1FC8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Blood Donation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Blood Donation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
